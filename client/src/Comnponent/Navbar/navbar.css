@@ -1,0 +1,157 @@
+.main-nav {
+    min-height: 60px;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+}
+
+.navbar {
+    height: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-brand img {
+    height: 30px;
+    margin-right: 0.5rem;
+}
+
+.navbar-brand h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.search-form {
+    flex: 1;
+    max-width: 600px;
+    margin: 0 2rem;
+    position: relative;
+}
+
+.search-form input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    padding-left: 2.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-form input:focus {
+    border-color: #009dff;
+    box-shadow: 0 0 0 4px rgba(0, 157, 255, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .search-form {
+        max-width: 400px;
+        margin: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-nav {
+        padding: 0.5rem;
+    }
+
+    .navbar-brand h1 {
+        font-size: 1.25rem;
+    }
+
+    .search-form {
+        display: none;
+    }
+
+    .nav-buttons {
+        gap: 0.5rem;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-search {
+        display: flex;
+        padding: 0.5rem;
+        background-color: #f8f9fa;
+    }
+
+    .mobile-search .search-form {
+        display: block;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-item {
+        display: none;
+    }
+
+    .auth-buttons {
+        gap: 0.25rem;
+    }
+
+    .auth-buttons button {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+  
